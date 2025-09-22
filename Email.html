@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<title>Jeu concours &mdash; Exercice pédagogique</title>
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<style type="text/css">
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: linear-gradient(to bottom, #a8edea, #fed6e3);
+  padding: 20px;
+  margin: 0;
+  min-height: 100vh;
+}
+.card {
+  max-width: 600px;
+  margin: 40px auto;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.08);
+  text-align: center;
+}
+@media (max-width: 640px) {
+  .card { margin: 20px 12px; }
+}
+</style>
+</head>
+<body>
+<div aria-labelledby="title" class="card" role="main">
+<div style="font-size:40px; margin-bottom:10px;">🎬</div>
+
+<h1 id="title" style="font-size:20px; margin:0 0 18px 0; color:#1652b5;">Participez et gagnez 3 places de cinéma !</h1>
+
+<p style="margin:0 0 12px 0;">Bonjour <strong>{{.FirstName}}</strong>,</p>
+
+<p style="margin:0 0 12px 0;">Nous avons une offre exclusive pour vous ! Participez à notre jeu concours et tentez de gagner <strong>3 places de cinéma</strong> pour le film de votre choix.</p>
+
+<p style="margin:18px 0;">
+  <a href="{{.URL}}" style="display:inline-block; padding:12px 18px; background:#1652b5; color:#fff; text-decoration:none; border-radius:6px; font-weight:600;">
+    Participer au concours
+  </a>
+</p>
+
+<p style="margin:0 0 10px 0; font-size:13px; color:#d0342c; font-weight:700;">
+⚠️ Attention : Cette offre est limitée aux 50 premiers participants !
+</p>
+
+<p style="margin:12px 0 6px 0;">Bonne chance !<br />
+L’équipe du concours</p>
+
+<hr style="border:none; border-top:1px solid #eef2f5; margin:18px 0;" />
+
+<p style="font-size:12px; color:#555; margin:0;">
+⚠️ Méfiez-vous des offres trop belles pour être vraies : elles peuvent être des tentatives de fraude.
+</p>
+
+<p style="font-size:11px; color:#999; margin-top:10px;">
+Ce modèle est simulé — il ne collecte aucune donnée réelle. Utilisez-le uniquement pour un contexte scolaire ou de sensibilisation.
+</p>
+</div>
+
+{{.Tracker}}
+</body>
+</html>

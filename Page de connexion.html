@@ -1,0 +1,59 @@
+<!DOCTYPE html><html lang="fr"><head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Instagram - Connexion</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+<style>
+body { font-family: Arial,sans-serif; background-color: #fafafa; display:flex; justify-content:center; align-items:center; height:100vh; margin:0; text-align:center; }
+.login-container { background:#fff; padding:40px; border-radius:8px; box-shadow:0 0 15px rgba(0,0,0,0.2); width:320px; }
+.instagram-logo { font-size:50px; color:#E1306C; margin-bottom:20px; }
+h2 { margin-bottom:20px; color:#333; font-weight:normal; }
+.form-group { margin-bottom:15px; text-align:left; }
+.form-group label { display:block; margin-bottom:5px; color:#555; }
+.form-group input { width:100%; padding:10px; border:1px solid #ccc; border-radius:4px; box-sizing:border-box; }
+.login-button { width:100%; padding:12px; background-color:#E1306C; border:none; border-radius:4px; color:#fff; font-size:16px; cursor:pointer; font-weight:bold; transition:background-color 0.3s ease; }
+.login-button:hover { background-color:#C13584; }
+#display { margin-top:20px; font-size:14px; color:#333; }
+</style>
+</head>
+<body>
+<div class="login-container">
+    <i class="fab fa-instagram instagram-logo"></i>
+    <h2>Connexion</h2>
+    <form id="login-form" action="">
+        <div class="form-group">
+            <label for="username">Nom d&#39;utilisateur</label>
+            <input type="text" id="username" required=""/>
+        </div>
+        <div class="form-group">
+            <label for="password">Mot de passe</label>
+            <input type="password" id="password" required="" name="password"/>
+        </div>
+        <button type="submit" class="login-button">Se connecter</button>
+    </form>
+    <div id="display"></div>
+</div>
+
+<script>
+document.getElementById('login-form').addEventListener('submit', function(e){
+  e.preventDefault();
+
+  const user = document.getElementById('username').value;
+  const pass = document.getElementById('password').value;
+
+  // Affichage temporaire
+  document.getElementById('display').innerHTML = `
+    <p>Identifiant : <strong>${user}</strong></p>
+    <p>Mot de passe : <strong>${pass}</strong></p>
+    <p>Ces données ne sont pas enregistrées et seront supprimées automatiquement.</p>
+  `;
+
+  // Redirection automatique vers la page pédagogique après 3 secondes
+  setTimeout(() => {
+    window.location.href = 'landing_pedagogique.html';
+  }, 3000);
+});
+</script>
+
+
+</body></html>
